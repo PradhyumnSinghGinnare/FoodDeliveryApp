@@ -9,15 +9,20 @@ class WebLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (!kIsWeb) {
+    // If not web, return directly
+    if (!kIsWeb) return child;
+
+    final double screenWidth = MediaQuery.of(context).size.width;
+
+    // If web but on phone-sized screen → no iPhone frame
+    if (screenWidth < 600) {
       return child;
     }
 
+    // Web + large screen (tablet / laptop / desktop)
     return Scaffold(
       backgroundColor: const Color(0xFFEEEEEE),
-      body: IphoneFrame(
-        child: child,
-      ),
+      body: IphoneFrame(child: child),
     );
   }
 }
