@@ -43,7 +43,7 @@ class _MyCurrentLocationState extends State<MyCurrentLocation> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Deliver Text", style: TextStyle(color: Theme.of(context).colorScheme.primary),),
+          Text("Deliver Address", style: TextStyle(color: Theme.of(context).colorScheme.primary),),
           GestureDetector(
             onTap: () => openLocationSearchBox(context),
             child: Row(

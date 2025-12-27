@@ -25,7 +25,7 @@ class MyDrawer extends StatelessWidget {
             children: [
               //drawer header
               DrawerHeader(
-                child: Icon(Icons.connect_without_contact,
+                child: Icon(Icons.fastfood_outlined, size: 40,
                     color: Theme.of(context).colorScheme.inversePrimary),
               ),
 
